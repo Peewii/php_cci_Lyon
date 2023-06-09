@@ -95,6 +95,12 @@ section {
     padding: 1em 0;
 }
 
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .navbar-brand {
     font-weight: bold;
     font-size: 1.4em;
@@ -107,7 +113,7 @@ section {
 
 /*********** BUTTON **********/
 .btn {
-    padding: 1em;
+    padding: 10px;
     border: none;
     border-radius: var(--border-radius);
     font-weight: bold;
@@ -129,8 +135,30 @@ section {
     color: white;
 }
 
+.btn-danger {
+    background: rgb(156, 33, 33);
+    color: white;
+}
+
+.btn-danger:hover {
+    background: rgb(99, 13, 13);
+}
+
 .btn-secondary:hover {
     background: var(--primary);
+}
+
+.btn-light {
+    background: #e9e9e9;
+}
+
+.btn-light:hover {
+    background: #afafaf;
+}
+
+/*********** TEXT **********/
+.text-center {
+    text-align: center;
 }
 
 /*********** FORM **********/

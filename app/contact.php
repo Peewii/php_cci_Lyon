@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 // On vérifie l'image est soumise et qu'il n'y a pas d'erreur
 if (isset($_FILES['image']) && $_FILES['image']['error'] === 0) {
     // On vérifie que le fichie ne dépasse pas 8Mo
