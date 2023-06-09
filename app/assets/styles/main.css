@@ -1,0 +1,180 @@
+:root {
+    --primary: #95d1cc;
+    --secondary: #22577e;
+    --terciary: #f6f2d4;
+    --box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+    --border-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(1em + 50px);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primary);
+    font-weight: 900;
+    margin-bottom: 10px;
+    line-height: 120%;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.6em;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+h4 {
+    font-size: 1.3em;
+}
+
+h5 {
+    font-size: 1em;
+}
+
+h6 {
+    font-size: 0.8em;
+}
+
+p {
+    font-size: 1em;
+    line-height: 120%;
+    margin: 10px 0;
+    word-break: break-word;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+    margin-bottom: 0px;
+    display: inline-block;
+}
+
+section {
+    margin: 1em auto !important;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+.navbar {
+    background: var(--primary);
+    position: sticky;
+    top: 0;
+    z-index: 99999999999;
+    padding: 1em 0;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.4em;
+    margin-right: 1.5em;
+}
+
+.navbar-link {
+    color: #363636;
+}
+
+/*********** BUTTON **********/
+.btn {
+    padding: 1em;
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.btn-primary {
+    background: var(--primary);
+}
+
+.btn-primary:hover {
+    background: var(--secondary);
+    color: white;
+}
+
+.btn-secondary {
+    background: var(--secondary);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: var(--primary);
+}
+
+/*********** FORM **********/
+.form {
+    border-radius: var(--border-radius);
+    border: 1px solid var(--secondary);
+    padding: 2em;
+    box-shadow: var(--box-shadow);
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.form-group {
+    margin-bottom: 1em;
+}
+
+input,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--primary);
+}
+
+/************** ALERT **************/
+.alert {
+    width: 70%;
+    margin: auto;
+    padding: 1em;
+    text-align: center;
+    border-radius: var(--border-radius);
+}
+
+.alert-danger {
+    background-color: rgba(184, 72, 72, 0.502);
+    border: 1px solid rgb(164, 21, 21);
+}
+
+.alert-success {
+    background-color: rgba(72, 184, 72, 0.502);
+    border: 1px solid rgb(21, 164, 21);
+}
