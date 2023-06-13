@@ -41,3 +41,26 @@ function findUserByEmail(string $email): array|bool
 
     return $sqlStatement->fetch();
 }
+
+function createUser(string $prenom, string $nom, string $email, string $password): bool
+{
+    global $db;
+
+    try {
+        $query = "INSERT INTO users(prenom, nom, email, password) VALUES (:prenom, :nom, :email, :password)";
+
+        $sqlStatement = $db->prepare($query);
+        $sqlStatement->execute([
+            'prenom'    => $prenom,
+            'nom'       => $nom,
+            'email'     => $email,
+            'password'  => $password,
+        ]);
+    } catch (PDOException $e) {
+        var_dump($e->getMessage());
+
+        return false;
+    }
+
+    return true;
+}

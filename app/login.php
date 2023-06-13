@@ -13,14 +13,14 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
     $verifUser = findUserByEmail($email);
 
     // On vérifie que l'utilisateur existe et que le mot de passe est bon
-    if ($verifUser && $verifUser['password'] == $password) {
+    if ($verifUser && password_verify($password, $verifUser['password'])) {
         // On connecte l'utilisateur
         $_SESSION['LOGGED_USER'] = [
             'id' => $verifUser['id'],
             'email' => $verifUser['email'],
             'prenom' => $verifUser['prenom'],
             'nom' => $verifUser['nom'],
-            'roles' => json_decode($verifUser['roles']),
+            'roles' => $verifUser['roles'] ? json_decode($verifUser['roles']) : ["ROLE_USER"],
         ];
 
         // On redirige l'utilisateur vers la page d'accueil
