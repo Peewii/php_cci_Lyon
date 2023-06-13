@@ -22,6 +22,8 @@ if (
         $user = createUser($prenom, $nom, $email, password_hash($password, PASSWORD_ARGON2I));
 
         if ($user) {
+            $_SESSION['messages']['success'] = "Vous êtes bien inscrit à notre application, vous pouvez vous connecter";
+
             header("Location: /login.php");
             exit();
         } else {

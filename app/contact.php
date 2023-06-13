@@ -34,6 +34,7 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] === 0) {
 <body>
     <?php include_once './templates/header.php'; ?>
     <main>
+        <?php include_once './templates/messages.php'; ?>
         <section class="container">
             <?php if (!empty($_POST['prenom']) && !empty($_POST['nom']) && !empty($_POST['age'])) : ?>
                 <h1>Bonjour <?= strip_tags($_POST['prenom']) . ' ' . strip_tags($_POST['nom']); ?></h1>

@@ -47,6 +47,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
 <body>
     <?php include_once './templates/header.php'; ?>
     <main>
+        <?php include_once './templates/messages.php'; ?>
         <section class="container">
             <form action="<?= $_SERVER['REQUEST_URI']; ?>" method="POST" class="form form-login">
                 <h1 class="text-center">Connexion</h1>

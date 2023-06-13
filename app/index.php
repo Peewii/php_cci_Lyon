@@ -20,6 +20,7 @@ include_once '/app/requests/users.php';
 <body>
     <?php include_once './templates/header.php'; ?>
     <main>
+        <?php include_once './templates/messages.php'; ?>
         <section class="container">
             <form action="/contact.php" method="POST" class="form" enctype="multipart/form-data">
                 <div class="form-group">

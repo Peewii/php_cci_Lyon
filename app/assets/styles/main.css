@@ -111,6 +111,15 @@ section {
     color: #363636;
 }
 
+/********** SPACE **********/
+.mb-2 {
+    margin-bottom: 1em;
+}
+
+.mt-2 {
+    margin-top: 1em;
+}
+
 /*********** BUTTON **********/
 .btn {
     padding: 10px;
