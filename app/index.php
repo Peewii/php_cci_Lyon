@@ -1,4 +1,10 @@
-<?php session_start(); ?>
+<?php
+
+session_start();
+
+include_once '/app/requests/users.php';
+
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
