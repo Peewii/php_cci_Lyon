@@ -67,6 +67,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
                     <input type="password" name="password" id="password" placeholder="********">
                 </div>
                 <button type="submit" class="btn btn-primary">Connexion</button>
+                <p>Pas encore de compte ? <a href="/register.php" class="btn-link">Créez-en un</a></p>
             </form>
         </section>
     </main>

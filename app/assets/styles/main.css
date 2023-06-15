@@ -165,6 +165,20 @@ section {
     background: #afafaf;
 }
 
+.btn-dark {
+    background: #3e3e3e;
+    color: white;
+}
+
+.btn-dark:hover {
+    background: #777777;
+}
+
+.btn-link {
+    text-decoration: underline;
+    color: var(--primary);
+}
+
 /*********** TEXT **********/
 .text-center {
     text-align: center;

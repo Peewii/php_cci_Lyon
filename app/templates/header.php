@@ -13,6 +13,7 @@
                 <a href="/logout.php" class="btn btn-danger">Deconnexion</a>
             <?php else : ?>
                 <a href="/login.php" class="btn btn-light">Connexion</a>
+                <a href="/register.php" class="btn btn-dark">Inscription</a>
             <? endif; ?>
         </div>
     </nav>
