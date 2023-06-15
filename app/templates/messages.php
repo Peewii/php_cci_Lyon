@@ -1,4 +1,4 @@
-<?php foreach ($_SESSION['messages'] as $status => $message) : ?>
+<?php foreach (isset($_SESSION['messages']) ? $_SESSION['messages'] : [] as $status => $message) : ?>
     <?php if ($status == 'success') : ?>
         <div class="alert alert-success mt-2 mb-2">
             <p>

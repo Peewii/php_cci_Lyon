@@ -42,6 +42,26 @@ function findUserByEmail(string $email): array|bool
     return $sqlStatement->fetch();
 }
 
+/**
+ * Récupère un user en cherchant avec un id
+ *
+ * @param integer $id Id pour filtrer
+ * @return array|bool Tableau assoc avec le User
+ */
+function findUserById(int $id): array|bool
+{
+    global $db;
+
+    $query = "SELECT id, prenom, nom, email, roles FROM users WHERE id = :id";
+    $sqlStatement = $db->prepare($query);
+    $sqlStatement->execute([
+        'id' => $id
+    ]);
+
+    return $sqlStatement->fetch();
+}
+
+
 function createUser(string $prenom, string $nom, string $email, string $password): bool
 {
     global $db;
@@ -55,6 +75,40 @@ function createUser(string $prenom, string $nom, string $email, string $password
             'nom'       => $nom,
             'email'     => $email,
             'password'  => $password,
+        ]);
+    } catch (PDOException $e) {
+        var_dump($e->getMessage());
+
+        return false;
+    }
+
+    return true;
+}
+
+/**
+ * Update user with id for identification
+ *
+ * @param integer $id Of user to update
+ * @param string $prenom Firstname of user
+ * @param string $nom Lastname of user
+ * @param string $email Email of user
+ * @param array $roles Roles of user
+ * @return boolean Return true if the query is ok, false if not
+ */
+function updateUser(int $id, string $prenom, string $nom, string $email, array $roles): bool
+{
+    global $db;
+
+    try {
+        $query = "UPDATE users SET prenom = :prenom, nom = :nom, email = :email, roles = :roles WHERE id = :id";
+
+        $sqlStatement = $db->prepare($query);
+        $sqlStatement->execute([
+            'prenom' => $prenom,
+            'nom' => $nom,
+            'email' => $email,
+            'roles' => json_encode($roles),
+            'id' => $id,
         ]);
     } catch (PDOException $e) {
         var_dump($e->getMessage());

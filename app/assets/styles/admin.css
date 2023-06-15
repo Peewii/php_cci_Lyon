@@ -1,0 +1,22 @@
+.card-user-list {
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1em 0;
+}
+
+.card-user-list > * {
+    width: 30%;
+}
+
+.card {
+    border-radius: var(--border-radius);
+    border: 1px solid var(--primary);
+    box-shadow: var(--box-shadow);
+}
+
+.card-body {
+    padding: 1em;
+}
