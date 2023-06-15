@@ -13,6 +13,8 @@ if (!in_array('ROLE_ADMIN', isset($_SESSION['LOGGED_USER']) ? $_SESSION['LOGGED_
     exit();
 }
 
+$_SESSION['token'] = bin2hex(random_bytes(35));
+
 ?>
 
 <!DOCTYPE html>
@@ -46,6 +48,11 @@ if (!in_array('ROLE_ADMIN', isset($_SESSION['LOGGED_USER']) ? $_SESSION['LOGGED_
                             </p>
                             <div class="card-btn">
                                 <a href="/admin/users/edit.php?id=<?= $user['id']; ?>" class="btn btn-primary">Modifier</a>
+                                <form action="/admin/users/delete.php" method="POST" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer cet utilisateur ?')">
+                                    <input type="hidden" name="id" value="<?= $user['id']; ?>">
+                                    <input type="hidden" name="token" value="<?= $_SESSION['token']; ?>">
+                                    <button class="btn btn-danger">Supprimer</button>
+                                </form>
                             </div>
                         </div>
                     </div>

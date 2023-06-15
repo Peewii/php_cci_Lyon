@@ -20,3 +20,11 @@
 .card-body {
     padding: 1em;
 }
+
+.card-btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em 0;
+}

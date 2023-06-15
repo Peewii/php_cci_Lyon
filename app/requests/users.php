@@ -118,3 +118,28 @@ function updateUser(int $id, string $prenom, string $nom, string $email, array $
 
     return true;
 }
+
+/**
+ * Delete a user from the database
+ *
+ * @param integer $id Id of user to delete
+ * @return boolean Return true if the query is successfull, false if not
+ */
+function deleteUser(int $id): bool
+{
+    global $db;
+
+    try {
+        $query = "DELETE FROM users WHERE id = :id";
+        $sqlStatement = $db->prepare($query);
+        $sqlStatement->execute([
+            'id' => $id,
+        ]);
+    } catch (PDOException $e) {
+        var_dump($e->getMessage());
+
+        return false;
+    }
+
+    return true;
+}
