@@ -1,0 +1,41 @@
+.card-user-list {
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 1em 0;
+}
+
+.card-user-list > * {
+    width: 30%;
+}
+
+.card {
+    border-radius: var(--border-radius);
+    border: 1px solid var(--primary);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    expect-ratio: 2/3;
+    object-fit: cover;
+}
+img {
+    width: 100%;
+
+}
+
+.card-body {
+    padding: 1em;
+}
+
+.card-btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em 0;
+}
