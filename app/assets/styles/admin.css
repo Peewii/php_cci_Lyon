@@ -15,6 +15,13 @@
     border-radius: var(--border-radius);
     border: 1px solid var(--primary);
     box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
 }
 
 .card-body {

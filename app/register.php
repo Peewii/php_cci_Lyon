@@ -32,6 +32,8 @@ if (
     } else {
         $errorMessage = "Cet email est déjà existant, veuillez vous connecter";
     }
+} elseif ($_SERVER['REQUEST_METHOD'] === "POST") {
+    $errorMessage = "Veuillez remplir les informations";
 }
 
 ?>

@@ -41,6 +41,8 @@ if (!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['email'])
     } else {
         $errorMessage = "Une erreur est survenue, try again";
     }
+} elseif ($_SERVER['REQUEST_METHOD'] === "POST") {
+    $errorMessage = "Veuillez remplir les informations";
 }
 
 ?>

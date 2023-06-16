@@ -29,6 +29,8 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
     } else {
         $errorMessage = 'Identifiants incorrects';
     }
+} elseif ($_SERVER['REQUEST_METHOD'] === "POST") {
+    $errorMessage = "Veuillez remplir les informations";
 }
 
 ?>

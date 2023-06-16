@@ -205,6 +205,14 @@ section {
     margin-bottom: 1em;
 }
 
+.img-form {
+    width: 50%;
+    margin: auto;
+    display: block;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+}
+
 input,
 textarea,
 select {
