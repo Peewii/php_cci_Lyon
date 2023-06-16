@@ -20,8 +20,10 @@
 
 .card-img {
     width: 100%;
-    aspect-ratio: 3/2;
     object-fit: cover;
+}
+img {
+    width: 100%;
 }
 
 .card-body {

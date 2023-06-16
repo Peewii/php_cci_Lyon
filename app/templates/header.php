@@ -10,6 +10,13 @@
         </div>
         <div class="navbar-btn">
             <?php if (isset($_SESSION['LOGGED_USER'])) : ?>
+                <div class="dropdown btn btn-light">
+                    <span>Admin</span>
+                    <div class="dropdown-content">
+                        <a href="/admin/users" class="dropdown-link">Users</a>
+                        <a href="/admin/features" class="dropdown-link">Features</a>
+                    </div>
+                </div>
                 <a href="/logout.php" class="btn btn-danger">Deconnexion</a>
             <?php else : ?>
                 <a href="/login.php" class="btn btn-light">Connexion</a>

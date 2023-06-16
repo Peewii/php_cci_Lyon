@@ -111,6 +111,34 @@ section {
     color: #363636;
 }
 
+.navbar-btn{
+    display:flex;
+    gap: 1em;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    border-radius: var(--border-radius);
+    background: whitesmoke;
+    z-index: 999;
+    top: 100%;
+    left: 0;
+    
+}
+.dropdown-content >* {
+    padding: 0.6em 1em;
+    width: 100%;
+}
+.dropdown-content > *:not(:last-child){
+    border-bottom: 1px solid grey;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 /********** SPACE **********/
 .mb-2 {
     margin-bottom: 1em;
