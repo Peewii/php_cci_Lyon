@@ -15,6 +15,7 @@
                     <div class="dropdown-content">
                         <a href="/admin/users" class="dropdown-link">Users</a>
                         <a href="/admin/features" class="dropdown-link">Features</a>
+                        <a href="/admin/articles" class="dropdown-link">articles</a>
                     </div>
                 </div>
                 <a href="/logout.php" class="btn btn-danger">Deconnexion</a>

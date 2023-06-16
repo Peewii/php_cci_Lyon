@@ -11,7 +11,7 @@ function findAllFeatures(): array
 {
     global $db;
 
-    $query = "SELECT * FROM features";
+    $query = "SELECT * FROM features ORDER BY nom ASC";
     $sqlStatement = $db->prepare($query);
     $sqlStatement->execute();
 

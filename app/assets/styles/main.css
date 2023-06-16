@@ -147,7 +147,9 @@ section {
 .mt-2 {
     margin-top: 1em;
 }
-
+.w-50{
+    width: 50%;
+}
 /*********** BUTTON **********/
 .btn {
     padding: 10px;
@@ -215,7 +217,12 @@ section {
 .text-muted {
     color: #acacac;
 }
-
+.text-success {
+    color: rgb(21, 164, 21);
+}
+.text-danger {
+    color: rgb(164, 21, 21);
+}
 /*********** FORM **********/
 .form {
     border-radius: var(--border-radius);
@@ -241,7 +248,7 @@ section {
     border-radius: var(--border-radius);
 }
 
-input,
+input:not([type="checkbox"]),
 textarea,
 select {
     display: block;
